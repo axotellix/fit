@@ -1,0 +1,45 @@
+
+// [ COLOURS ]:
+
+$yellow:    #F5DC54;
+$white:     #FCF4DF;
+$grey:      #A39D8D;
+$dark:      #090B0E;
+$black:     #030405;
+
+
+// [ FONTS ]:
+
+$f-size: 10px;
+$f-body:    'Syne', sans-serif;
+$f-decor:   'Suissnord', sans-serif;
+$font: $f-size $f-body;
+$f-lite:        300;
+$f-normal:      400;
+$f-medium:      500;
+$f-semibold:    600;
+$f-bold:        700;
+$f-black:       900;
+
+
+// [ SIZES ]:
+
+$mb: 576px;
+$sm: 768px;
+$md: 900px;
+$lg: 1200px;
+$w: $lg;
+
+
+// [ MARGINS ]:
+
+:root {
+
+    --m-tiny:   35px;
+    --m-small:  50px;
+    --m-medium: 75px;
+    --m-big:    100px;
+    --m-large:  125px;
+
+}
+

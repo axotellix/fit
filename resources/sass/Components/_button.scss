@@ -1,0 +1,23 @@
+
+// [ BUTTON ]
+.button {
+    padding: 10px 20px;
+    color: $white;
+    font-family: $f-body;
+    font-size: 1.5rem;
+    transform: scaleX(1.2);     // crutch: to visually widen 'Syne' font with weight less than 600
+    font-weight: $f-medium;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid $yellow;
+    background: rgba($dark, 0.5);
+    transition: background 0.25s;
+
+    &:hover { background: rgba($dark, 0.9); }
+}
+.button-big {
+    @extend .button;
+
+    font-size: 2.5rem;
+    padding: 10px 25px;
+}

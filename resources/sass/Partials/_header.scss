@@ -1,0 +1,44 @@
+
+// [ HEADER ]
+header {
+    --min-h: 800px;
+
+    position: relative;
+    width: calc( 100vw - var(--m-large) );
+    max-height: calc( 90vh - 50px ); min-height: var(--min-h);
+    margin: 0 auto;
+    z-index: 1;
+    @include flex-align;
+
+    .wrapper {
+        position: relative;
+        width: 100%; 
+        max-height: calc( 90vh - 50px ); min-height: var(--min-h);
+    }
+}
+
+// [ home page ]
+ // background image
+header img.background-img { 
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    top: -70px;
+    max-height: 100%;
+    opacity: 0.2;
+    z-index: -1;
+}
+ // FIT logo
+header .logo {
+    max-width: 300px;
+    margin-top: 18vh;
+}
+ // CTA button
+header .CTA {
+    margin-top: 5vh;
+}
+ // social icons
+header .icons {
+    margin-top: 9vh;
+    @include flex-align;
+}

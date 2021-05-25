@@ -1,0 +1,30 @@
+
+// [ NAVBAR ]
+nav {
+    height: 50px;
+    z-index: 9999;
+    position: relative;
+    @include flex-align;
+    @include glass(def, def, $dark);
+    @include box-shadow(strong, bottom);
+}
+nav .navlink {
+    flex-basis: 100px;
+    height: 100%;
+    margin: 0 10px;
+    color: $white;
+    font-family: $f-body;
+    font-size: 1.5rem;
+    transform: scaleX(1.2);     // crutch: to visually widen 'Syne' font with weight less than 600
+    font-weight: $f-medium;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid transparent;
+    transition: color 0.25s, border-color 0.25s;
+    @include flex-align;
+
+    &:hover {
+        color: lighten($white, 10%);
+        border-color: $white;
+    }
+}

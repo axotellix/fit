@@ -1,0 +1,9 @@
+
+// [ GENERAL ]
+html { font: $font; font-weight: $f-normal; }
+body {
+    background: $black;
+    color: $white;
+    font-smooth: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
