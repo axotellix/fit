@@ -460,13 +460,12 @@ nav .navlink:hover {
 }
 
 header {
-  --min-h: 800px;
+  --min-h: 700px;
   position: relative;
   width: calc( 100vw - var(--m-large) );
   max-height: calc( 90vh - 50px );
   min-height: var(--min-h);
   margin: 0 auto;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -494,7 +493,7 @@ header img.background-img {
   pointer-events: none;
   position: absolute;
   top: -70px;
-  max-height: 100%;
+  max-height: calc(100% + 100px);
   opacity: 0.2;
   z-index: -1;
 }

@@ -63,7 +63,11 @@
 
     {{-- [ extra content ] --}}
     @section('main-content')
+    <div class="wrapper mt--50">
 
+
+
+    </div>
     @endsection
 
     {{-- [ common content ] --}}
