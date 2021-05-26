@@ -114,3 +114,11 @@
     background-size: $size;
     background-position: $pos;
 }
+
+
+// stretch > element over whole space
+@mixin stretch($pos: absolute) {
+    position: $pos;
+    top: 0; bottom: 0; 
+    left: 0; right: 0;
+}

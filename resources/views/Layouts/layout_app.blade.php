@@ -16,7 +16,9 @@
 
     <title>FIT</title>
 </head>
-<body>
+<body class = 'preload'>
+
+    @yield('preloader')
 
     @yield('nav')
 

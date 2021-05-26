@@ -1,0 +1,42 @@
+
+// [ PRELOADER ]
+body.preload {
+    overflow: hidden;
+  }
+  
+body.loaded {
+    overflow: auto;
+}
+#preloader {
+    background: $black;
+    transition: opacity 0.25s;
+    z-index: 9999;
+    @include stretch(fixed);
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0; height: 0;
+        border: 0.25vw solid $white;
+        padding: 2vw;
+        animation: preloader 1.5s cubic-bezier(0.2, 0, 0.8, 1) infinite;
+        @include align;
+      }
+}
+
+
+// --------------------
+@keyframes preloader {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+      border-radius: 0;
+    }
+    50% {
+      border-radius: 100px;
+      border-color: $yellow;
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+      border-radius: 0;
+    }
+  }

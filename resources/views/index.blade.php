@@ -2,6 +2,14 @@
 @extends('Layouts.layout_app')
 
 
+{{-- [ PRELOADER ] --}}
+@section('preloader')
+
+    @include('Layouts.layout_preloader')
+
+@endsection
+
+
 {{-- [ NAVBAR ] --}}
 @section('nav')
 
@@ -75,12 +83,20 @@
             </p>
         </section>
 
-        <section>
+        <section class = 'mb-50'>
+
             <p>
                 <span class = 'h4'>Our gyms</span>
 
                 We aim at providing the most comfortable & modern gyms. So we pay special attention to what is really important for comfortable training – space, light and air. Check out those loft style gyms!
             </p>
+
+            <ul class = 'gallery'>
+                <li class="photo"><img class = 'photo' src="/img/gym/1.png" alt="fit-gym"></li>
+                <li class="photo"><img class = 'photo' src="/img/gym/2.png" alt="fit-gym"></li>
+                <li class="photo"><img class = 'photo' src="/img/gym/3.png" alt="fit-gym"></li>
+            </ul>
+
         </section>
 
 

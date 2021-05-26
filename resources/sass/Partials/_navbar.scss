@@ -2,7 +2,7 @@
 // [ NAVBAR ]
 nav {
     height: 50px;
-    z-index: 9999;
+    z-index: 100;
     position: relative;
     @include flex-align;
     @include glass(def, def, $dark);
