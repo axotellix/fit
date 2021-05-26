@@ -63,8 +63,9 @@
 
     {{-- [ extra content ] --}}
     @section('main-content')
-    <div class="wrapper mt--50">
+    <div class="wrapper">
 
+        <h2>ABOUT US</h2>
 
 
     </div>

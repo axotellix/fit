@@ -3,5 +3,30 @@
 main {
     position: relative;
     width: calc( 100vw - var(--m-large) );
+    max-height: max-content; min-height: 500px;
     margin: 0 auto;
+    overflow: hidden;
+
+    // .wrapper {
+        
+    // }
+}
+
+ // set > SVG width & position
+svg.bg-img {
+    fill: $white !important;
+    opacity: 0.05 !important;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+
+    &.fit-img {
+        @include align(left, top);
+        max-width: 274px; height: 350px;
+    }
+    &.dots {
+        @include align(right, top, absolute, 0, 800px);
+        max-width: 300px; height: 260px;
+    }
+
 }

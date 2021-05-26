@@ -525,7 +525,41 @@ header .icons {
 main {
   position: relative;
   width: calc( 100vw - var(--m-large) );
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  min-height: 500px;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+svg.bg-img {
+  fill: #FCF4DF !important;
+  opacity: 0.05 !important;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+svg.bg-img.fit-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+  max-width: 274px;
+  height: 350px;
+}
+svg.bg-img.dots {
+  position: absolute;
+  right: 0;
+  top: 800px;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+  max-width: 300px;
+  height: 260px;
 }
 
 .button, .button-big {
@@ -556,4 +590,17 @@ main {
   max-width: 20px;
   margin: 0 10px;
   opacity: 0.25;
+}
+
+h2 {
+  color: #FCF4DF;
+  font-family: "Suissnord", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  margin: 50px 0;
+}
+h2::before {
+  content: "= ";
+  color: #F5DC54;
 }
