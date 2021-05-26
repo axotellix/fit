@@ -649,3 +649,13 @@ p {
 p + p {
   margin-top: var(--m-small);
 }
+
+section {
+  width: 100%;
+}
+section + section {
+  margin-top: var(--m-small);
+}
+section p:last-of-type {
+  margin-bottom: 0;
+}

@@ -67,17 +67,21 @@
 
         <h2>ABOUT US</h2>
 
-        <p>
-            <span class = 'h4'>FIT fitness center</span>
+        <section>
+            <p>
+                <span class = 'h4'>FIT fitness center</span>
 
-            FIT fitness Clubs is a results-driven fitness club with gyms located in Moscow, Russia. Large, bright rooms and panoramic windows all around will more cosy than at home! Our modern fitness center offers all the amenities you’d expect to find in any gym, but in friendly, hassle-free environment that welcomes members of all ages and abilities.
-        </p>
+                FIT fitness Clubs is a results-driven fitness club with gyms located in Moscow, Russia. Large, bright rooms and panoramic windows all around will more cosy than at home! Our modern fitness center offers all the amenities you’d expect to find in any gym, but in friendly, hassle-free environment that welcomes members of all ages and abilities.
+            </p>
+        </section>
 
-        <p>
-            <span class = 'h4'>Our gyms</span>
+        <section>
+            <p>
+                <span class = 'h4'>Our gyms</span>
 
-            We aim at providing the most comfortable & modern gyms. So we pay special attention to what is really important for comfortable training – space, light and air. Check out those loft style gyms!
-        </p>
+                We aim at providing the most comfortable & modern gyms. So we pay special attention to what is really important for comfortable training – space, light and air. Check out those loft style gyms!
+            </p>
+        </section>
 
 
     </div>
