@@ -1,0 +1,15 @@
+
+// [ PARAGRAPH ]
+p { 
+    max-width: 55%; min-width: 320px;
+    margin-left: var(--m-small);
+    color: $white;
+    font-family: $f-body;
+    font-size: 1.7rem;
+    font-weight: $f-lite; 
+    line-height: 2;
+    transform: scaleX(1.2);     // crutch: to visually widen 'Syne' font with weight less than 600
+    transform-origin: left top;
+
+    & + & { margin-top: var(--m-small) }
+}

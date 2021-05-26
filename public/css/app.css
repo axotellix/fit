@@ -1,8 +1,8 @@
 @import 'Normalize.css';
 :root {
-  --m-tiny: 35px;
+  --m-tiny: 20px;
   --m-small: 50px;
-  --m-medium: 75px;
+  --m-medium: 70px;
   --m-big: 100px;
   --m-large: 125px;
 }
@@ -593,15 +593,53 @@ svg.bg-img.dots {
 }
 
 h2 {
+  margin: var(--m-medium) 0;
   color: #FCF4DF;
   font-family: "Suissnord", sans-serif;
   font-size: 2.8rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  margin: 50px 0;
 }
 h2::before {
   content: "= ";
   color: #F5DC54;
+}
+
+h4, .h4 {
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-bottom: var(--m-tiny);
+  color: #FCF4DF;
+  font-family: "Syne", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+h4 + h4, h4 + .h4, .h4 + h4, .h4 + .h4 {
+  margin-top: var(--m-small);
+}
+h4::after, .h4::after {
+  content: ".";
+}
+
+p {
+  max-width: 55%;
+  min-width: 320px;
+  margin-left: var(--m-small);
+  color: #FCF4DF;
+  font-family: "Syne", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 2;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+p + p {
+  margin-top: var(--m-small);
 }

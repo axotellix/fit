@@ -19,6 +19,7 @@ $f-normal:      400;
 $f-medium:      500;
 $f-semibold:    600;
 $f-bold:        700;
+$f-extra-bold:  800;
 $f-black:       900;
 
 
@@ -35,9 +36,9 @@ $w: $lg;
 
 :root {
 
-    --m-tiny:   35px;
+    --m-tiny:   20px;
     --m-small:  50px;
-    --m-medium: 75px;
+    --m-medium: 70px;
     --m-big:    100px;
     --m-large:  125px;
 
