@@ -31,7 +31,7 @@
         </svg>
 
         <!-- CTA button -->
-        <a href="" class="CTA button-big">JOIN NOW</a>
+        <a href="" class="CTA button-big"><span>JOIN NOW</span></a>
 
         <!-- social icons -->
         <div class="icons">
@@ -83,7 +83,7 @@
             </p>
         </section>
 
-        <section class = 'mb-50'>
+        <section>
 
             <p>
                 <span class = 'h4'>Our gyms</span>
@@ -92,10 +92,12 @@
             </p>
 
             <ul class = 'gallery'>
-                <li class="photo"><img class = 'photo' src="/img/gym/1.png" alt="fit-gym"></li>
-                <li class="photo"><img class = 'photo' src="/img/gym/2.png" alt="fit-gym"></li>
-                <li class="photo"><img class = 'photo' src="/img/gym/3.png" alt="fit-gym"></li>
+                <li class="photo"><img src="/img/gym/1.png" alt="fit-gym"></li>
+                <li class="photo"><img src="/img/gym/2.png" alt="fit-gym"></li>
+                <li class="photo"><img src="/img/gym/3.png" alt="fit-gym"></li>
             </ul>
+
+            <a href="" class="button"><span>SEE ALL PHOTOS</span></a>
 
         </section>
 
