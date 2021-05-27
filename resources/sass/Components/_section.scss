@@ -5,12 +5,12 @@ section {
 
     & + & { margin-top: var(--m-small) } 
 
-    p { margin-left: var(--m-small) }
-    p:last-of-type { margin-bottom : 0 }
-    p + .gallery { margin-top: var(--m-small) }
+    p               { margin-left: var(--m-small)   }
+    p:last-of-type  { margin-bottom: 0              }
+    p + .gallery    { margin-top: var(--m-small)    }
 
     .button { 
-        margin-top: var(--m-small); 
+        margin-top:  var(--m-small); 
         margin-left: var(--m-small); 
     }
 }

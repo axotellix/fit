@@ -7,3 +7,11 @@ body {
     font-smooth: antialiased;
     -webkit-font-smoothing: antialiased;
 }
+
+svg.bg-img {
+    fill: $white !important;
+    opacity: 0.05 !important;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+}

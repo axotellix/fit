@@ -59,6 +59,8 @@
     -webkit-backdrop-filter: blur($blur);
 
 }
+// remove > glass effect
+@mixin unglass { backdrop-filter: blur(0) }
 
 // set > border-radius
 @mixin border-radius($v) {

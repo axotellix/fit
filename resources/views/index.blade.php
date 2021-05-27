@@ -109,3 +109,11 @@
     @include('Layouts.layout_main')
 
 @endsection
+
+
+{{-- [ FOOTER ] --}}
+@section('footer')
+
+    @include('Layouts.layout_footer')
+
+@endsection

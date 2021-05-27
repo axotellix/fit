@@ -426,7 +426,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+svg.bg-img {
+  fill: #FCF4DF !important;
+  opacity: 0.05 !important;
+  z-index: -1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
 nav {
+  width: 100%;
   height: 50px;
   z-index: 100;
   position: relative;
@@ -559,17 +571,7 @@ main {
   overflow: hidden;
 }
 
-svg.bg-img {
-  fill: #FCF4DF !important;
-  opacity: 0.05 !important;
-  z-index: -1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-}
-svg.bg-img.fit-img {
+svg.fit-img {
   position: absolute;
   left: 0;
   top: 0;
@@ -578,7 +580,8 @@ svg.bg-img.fit-img {
   max-width: 274px;
   height: 350px;
 }
-svg.bg-img.dots {
+
+svg.dots {
   position: absolute;
   right: 0;
   top: 800px;
@@ -586,6 +589,76 @@ svg.bg-img.dots {
           transform: translateX(0) translateY(0);
   max-width: 300px;
   height: 260px;
+}
+
+footer {
+  position: relative;
+  margin-top: var(--m-big);
+  padding: 50px;
+  background: #090B0E;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .icons {
+  margin-bottom: calc( var(--m-tiny) / 2 );
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .phone-number {
+  color: rgba(252, 244, 223, 0.25);
+  font-family: "Syne", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+footer nav {
+  margin-top: calc( var(--m-tiny) / 2 );
+  padding-bottom: 2px;
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+}
+
+footer .bg-img {
+  fill: #FCF4DF;
+  width: 65vw;
+  min-height: 150px;
+  opacity: 0.015 !important;
+  position: absolute;
+  left: 10vw;
+  bottom: -30px;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
 }
 
 .button, .button-big {
@@ -625,6 +698,7 @@ svg.bg-img.dots {
 }
 
 .social-icon {
+  fill: #FCF4DF;
   max-width: 20px;
   max-height: 25px;
   margin: 0 10px;
