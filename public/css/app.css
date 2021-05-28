@@ -744,7 +744,8 @@ svg.dots {
 footer {
   position: relative;
   margin-top: var(--m-big);
-  padding: 50px;
+  padding: var(--m-small);
+  padding-bottom: calc( var(--m-small) - 10px );
   background: #090B0E;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

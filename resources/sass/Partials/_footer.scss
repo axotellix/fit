@@ -3,7 +3,8 @@
 footer {
     position: relative;
     margin-top: var(--m-big);
-    padding: 50px;
+    padding: var(--m-small);
+    padding-bottom: calc( var(--m-small) - 10px );
     background: $dark;
     flex-direction: column;
     z-index: 1;
