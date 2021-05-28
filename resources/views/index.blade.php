@@ -91,13 +91,31 @@
                 We aim at providing the most comfortable & modern gyms. So we pay special attention to what is really important for comfortable training – space, light and air. Check out those loft style gyms!
             </p>
 
-            <ul class = 'gallery'>
+            <ul class = 'gallery-wide-horizontal'>
                 <li class="photo"><img src="/img/gym/1.png" alt="fit-gym"></li>
                 <li class="photo"><img src="/img/gym/2.png" alt="fit-gym"></li>
                 <li class="photo"><img src="/img/gym/3.png" alt="fit-gym"></li>
             </ul>
 
             <a href="" class="button"><span>SEE ALL PHOTOS</span></a>
+
+        </section>
+
+        <section>
+
+            <p>
+                <span class = 'h4'>Our crew</span>
+
+                Practice makes perfect - and with our crew twice as perfect! Practice with expirienced, patient & friendly trainers. 
+            </p>
+
+            <ul class = 'gallery gallery-small-vertical'>
+                <li class="photo" caption = 'Aaron Thompson'><img src="/img/crew/1.png" alt="fit-crew"></li>
+                <li class="photo" caption = 'Alexandra Rivera'><img src="/img/crew/2.png" alt="fit-crew"></li>
+                <li class="photo" caption = 'Ryan Adams'><img src="/img/crew/3.png" alt="fit-crew"></li>
+            </ul>
+
+            <a href="" class="button"><span>SEE ALL CREW</span></a>
 
         </section>
 

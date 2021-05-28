@@ -1,18 +1,31 @@
 
 // [ GALLERY ]
 .gallery {
+    position: relative;
     width: 100%;
     margin: 0 auto;
     padding: 0 var(--m-small);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--m-tiny);
-
+    
     .photo {
+        position: relative;
         display: inline-block;
         aspect-ratio: 5/3;
         overflow: hidden;
         cursor: pointer;
+
+        &[caption] { overflow: visible }
+
+        &::after {
+            content: attr(caption);
+            display: block;
+            max-width: max-content;
+            margin-top: var(--m-tiny);
+            color: $white;
+            font-size: 1.5rem;
+            transform: scaleX(1.2);     // crutch: to visually widen 'Syne' font with weight less than 600
+            transform-origin: left top;
+
+        }
 
         &:hover img {
             filter: brightness(40%);
@@ -25,3 +38,46 @@
         transition: filter 0.25s ease-in;
     }
 }
+
+
+//: for wide gallery (using GRID)
+.gallery-wide-horizontal, .gallery-wide-vertical { 
+    @extend .gallery;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--m-tiny);
+
+}
+//: for small gallery (using FLEX)
+.gallery-small-horizontal, .gallery-small-vertical { 
+    @extend .gallery;
+
+    width: calc(100% + 2 * var(--m-tiny)) !important;
+    left: calc(-1 * var(--m-tiny));
+    flex-wrap: wrap;
+    @include flex-align(flex-start, flex-start);
+
+    .photo {
+        min-width: 200px; max-width: 260px;
+        flex: 1 0 100px;
+        margin: var(--m-tiny);
+    }
+
+}
+
+
+//: for horizontally oriented photos
+.gallery-wide-horizontal, .gallery-small-horizontal {
+    .photo {
+        aspect-ratio: 5/3;
+    }
+}
+//: for vertically oriented photos
+.gallery-wide-vertical, .gallery-small-vertical {
+    .photo {
+        aspect-ratio: 4/5;
+    }
+}
+
+

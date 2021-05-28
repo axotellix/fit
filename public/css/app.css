@@ -796,7 +796,7 @@ section p {
 section p:last-of-type {
   margin-bottom: 0;
 }
-section p + .gallery {
+section p + .gallery, section p + .gallery-small-horizontal, section p + .gallery-small-vertical, section p + .gallery-wide-horizontal, section p + .gallery-wide-vertical {
   margin-top: var(--m-small);
 }
 section .button, section .button-big {
@@ -804,26 +804,41 @@ section .button, section .button-big {
   margin-left: var(--m-small);
 }
 
-.gallery {
+.gallery, .gallery-small-horizontal, .gallery-small-vertical, .gallery-wide-horizontal, .gallery-wide-vertical {
+  position: relative;
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--m-small);
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--m-tiny);
 }
-.gallery .photo {
+.gallery .photo, .gallery-small-horizontal .photo, .gallery-small-vertical .photo, .gallery-wide-horizontal .photo, .gallery-wide-vertical .photo {
+  position: relative;
   display: inline-block;
   aspect-ratio: 5/3;
   overflow: hidden;
   cursor: pointer;
 }
-.gallery .photo:hover img {
+.gallery .photo[caption], .gallery-small-horizontal .photo[caption], .gallery-small-vertical .photo[caption], .gallery-wide-horizontal .photo[caption], .gallery-wide-vertical .photo[caption] {
+  overflow: visible;
+}
+.gallery .photo::after, .gallery-small-horizontal .photo::after, .gallery-small-vertical .photo::after, .gallery-wide-horizontal .photo::after, .gallery-wide-vertical .photo::after {
+  content: attr(caption);
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin-top: var(--m-tiny);
+  color: #FCF4DF;
+  font-size: 1.5rem;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+.gallery .photo:hover img, .gallery-small-horizontal .photo:hover img, .gallery-small-vertical .photo:hover img, .gallery-wide-horizontal .photo:hover img, .gallery-wide-vertical .photo:hover img {
   -webkit-filter: brightness(40%);
           filter: brightness(40%);
 }
-.gallery .photo img {
+.gallery .photo img, .gallery-small-horizontal .photo img, .gallery-small-vertical .photo img, .gallery-wide-horizontal .photo img, .gallery-wide-vertical .photo img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -832,6 +847,51 @@ section .button, section .button-big {
   transition: -webkit-filter 0.25s ease-in;
   transition: filter 0.25s ease-in;
   transition: filter 0.25s ease-in, -webkit-filter 0.25s ease-in;
+}
+
+.gallery-wide-horizontal, .gallery-wide-vertical {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--m-tiny);
+}
+
+.gallery-small-horizontal, .gallery-small-vertical {
+  width: calc(100% + 2 * var(--m-tiny)) !important;
+  left: calc(-1 * var(--m-tiny));
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: false;
+          flex-direction: false;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.gallery-small-horizontal .photo, .gallery-small-vertical .photo {
+  min-width: 200px;
+  max-width: 260px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100px;
+          flex: 1 0 100px;
+  margin: var(--m-tiny);
+}
+
+.gallery-wide-horizontal .photo, .gallery-small-horizontal .photo {
+  aspect-ratio: 5/3;
+}
+
+.gallery-wide-vertical .photo, .gallery-small-vertical .photo {
+  aspect-ratio: 4/5;
 }
 
 body.preload {
