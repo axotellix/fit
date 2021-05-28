@@ -17,7 +17,7 @@ body.loaded {
         content: "";
         display: block;
         width: 0; height: 0;
-        border: 0.25vw solid $white;
+        border: 0.2vw solid $white;
         padding: 2vw;
         animation: preloader 1.5s cubic-bezier(0.2, 0, 0.8, 1) infinite;
         @include align;

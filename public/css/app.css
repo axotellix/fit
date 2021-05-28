@@ -608,6 +608,32 @@ svg.dots {
   height: 260px;
 }
 
+.map {
+  position: relative;
+  width: 100%;
+  max-height: 550px;
+  overflow: hidden;
+}
+.map .button, .map .button-big {
+  z-index: 100;
+  position: absolute;
+  left: 20px;
+  bottom: 50px;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+}
+.map .button:hover + img, .map .button-big:hover + img {
+  -webkit-filter: brightness(60%);
+          filter: brightness(60%);
+}
+.map img {
+  width: 100%;
+  -webkit-transition: -webkit-filter 0.25s;
+  transition: -webkit-filter 0.25s;
+  transition: filter 0.25s;
+  transition: filter 0.25s, -webkit-filter 0.25s;
+}
+
 footer {
   position: relative;
   margin-top: var(--m-big);
@@ -918,7 +944,7 @@ body.loaded {
   display: block;
   width: 0;
   height: 0;
-  border: 0.25vw solid #FCF4DF;
+  border: 0.2vw solid #FCF4DF;
   padding: 2vw;
   -webkit-animation: preloader 1.5s cubic-bezier(0.2, 0, 0.8, 1) infinite;
           animation: preloader 1.5s cubic-bezier(0.2, 0, 0.8, 1) infinite;

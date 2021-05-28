@@ -120,6 +120,17 @@
         </section>
 
 
+        <h2>FIND US HERE</h2>
+
+        <section>
+            <p class = 'mb-20'>4 Romanov ln, apt. 2</p>
+
+            <div class="map">
+                <a href="" class="button"><span>OPEN IN YANDEX.MAPs</span></a>
+                <img src="/img/map.png" alt="map">
+            </div>
+        </section>
+
     </div>
     @endsection
 
