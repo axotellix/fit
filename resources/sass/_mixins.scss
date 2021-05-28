@@ -22,11 +22,18 @@
 }
 
 // center > content via flexbox
-@mixin flex-align($x_axe: center, $y_axe: center) {
+@mixin flex-align($x_axe: center, $y_axe: center, $direction: false) {
+
+    @if $x_axe == 'def' { $x_axe: center }
+    @if $y_axe == 'def' { $y_axe: center }
+    
+    @if not $direction { flex-direction: $direction }
+
     display: flex;
     justify-content: $x_axe;
     align-content: $y_axe;
     align-items: $y_axe;
+    
 }
 
 // center > content via margin
