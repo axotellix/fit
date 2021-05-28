@@ -1,0 +1,43 @@
+
+// [ PHOTO SLIDER ]
+.photo-slider { 
+    position: relative;
+    max-width: 66vw;
+    @include flex-align(flex-start, center);
+
+    // buttons: prev & next
+    .slider-controls { 
+        padding: inherit;
+        @include stretch;
+        @include flex-align(space-between, center);
+    }
+    .ctrl {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        width: 0; height: 0;
+        padding: 1.5vw;
+        margin: 0 var(--m-tiny);
+        border: 1px solid $yellow;
+        background: rgba($dark, 0.5);
+        cursor: pointer;
+        transition: background 0.25s;
+        @include flex-align;
+        @include border-radius(100%);
+
+        &:hover { background: rgba($dark, 0.9) }
+
+        &.inactive {
+            opacity: 0.5;
+            user-select: none;
+            pointer-events: none;
+        }
+
+        svg { fill: $yellow; max-width: 50%; @include align; }
+    }
+
+    // slider`s image
+    img {
+        max-width: 100%;
+    }
+
+}

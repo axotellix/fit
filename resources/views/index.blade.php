@@ -97,7 +97,7 @@
                 <li class="photo"><img src="/img/gym/3.png" alt="fit-gym"></li>
             </ul>
 
-            <a href="" class="button"><span>SEE ALL PHOTOS</span></a>
+            <a href="/gallery" class="button"><span>SEE ALL PHOTOS</span></a>
 
         </section>
 
@@ -115,7 +115,7 @@
                 <li class="photo" caption = 'Ryan Adams'><img src="/img/crew/3.png" alt="fit-crew"></li>
             </ul>
 
-            <a href="" class="button"><span>SEE ALL CREW</span></a>
+            <a href="/crew" class="button"><span>SEE ALL CREW</span></a>
 
         </section>
 

@@ -1,0 +1,4 @@
+
+ = Ideas
+
+1. Move > 'social icons' to independent component

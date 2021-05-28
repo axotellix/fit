@@ -9,6 +9,5 @@ p {
     line-height: 2;
     transform: scaleX(1.2);     // crutch: to visually widen 'Syne' font with weight less than 600
     transform-origin: left top;
-
-    & + & { margin-top: var(--m-small) }
+    margin-top: var(--m-small);
 }
