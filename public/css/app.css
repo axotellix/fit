@@ -339,7 +339,6 @@
   -webkit-box-direction: normal !important;
       -ms-flex-direction: column !important;
           flex-direction: column !important;
-  flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,10 +442,6 @@ nav {
   height: 50px;
   z-index: 100;
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: false;
-          flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,10 +480,6 @@ nav .navlink {
   border-bottom: 1px solid transparent;
   -webkit-transition: color 0.25s, border-color 0.25s;
   transition: color 0.25s, border-color 0.25s;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: false;
-          flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,12 +502,9 @@ header {
   position: relative;
   width: calc( 100vw - var(--m-large) );
   max-height: calc( 90vh - 50px );
+  height: var(--min-h);
   min-height: var(--min-h);
   margin: 0 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: false;
-          flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,10 +548,6 @@ header .CTA {
 
 header .icons {
   margin-top: 20vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: false;
-          flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,6 +559,69 @@ header .icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#crew {
+  height: 100%;
+  padding: var(--m-small) 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#crew .crew-info, #crew .crew-photo {
+  padding: 0 var(--m-small);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 200px;
+          flex: 1 0 200px;
+  min-height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+#crew .crew-info .logo {
+  max-width: 120px;
+  margin: 0;
+}
+#crew .crew-info .crew-name {
+  display: block;
+  margin-bottom: 5px;
+  color: #FCF4DF;
+  font-size: 2rem;
+  line-height: 1;
+}
+#crew .crew-info .crew-age {
+  display: block;
+  margin-bottom: calc(var(--m-tiny) + 5px);
+  color: rgba(252, 244, 223, 0.6);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+#crew .crew-info p {
+  max-width: 70%;
+  margin-left: 0;
+}
+#crew .crew-photo img {
+  max-height: 60vh;
 }
 
 main {
@@ -645,8 +692,6 @@ footer {
           flex-direction: column;
   z-index: 1;
   overflow: hidden;
-  -ms-flex-direction: false;
-      flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -662,10 +707,6 @@ footer {
 
 footer .icons {
   margin-bottom: calc( var(--m-tiny) / 2 );
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: false;
-          flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -887,10 +928,6 @@ section .button, section .button-big {
   left: calc(-1 * var(--m-tiny));
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: false;
-          flex-direction: false;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

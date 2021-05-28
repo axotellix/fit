@@ -27,7 +27,7 @@
     @if $x_axe == 'def' { $x_axe: center }
     @if $y_axe == 'def' { $y_axe: center }
     
-    @if not $direction { flex-direction: $direction }
+    @if $direction { flex-direction: $direction }
 
     display: flex;
     justify-content: $x_axe;

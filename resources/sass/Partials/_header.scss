@@ -5,7 +5,7 @@ header {
 
     position: relative;
     width: calc( 100vw - var(--m-large) );
-    max-height: calc( 90vh - 50px ); min-height: var(--min-h);
+    max-height: calc( 90vh - 50px ); height: var(--min-h); min-height: var(--min-h);
     margin: 0 auto;
     @include flex-align;
 
@@ -40,4 +40,55 @@ header .CTA {
 header .icons {
     margin-top: 20vh;
     @include flex-align;
+}
+
+
+// [ crew page ]
+#crew {
+    height: 100%;
+    padding: var(--m-small) 0;
+    @include flex-align(flex-start, flex-start);
+
+    // crew info & photo sections
+    .crew-info, .crew-photo {  
+        padding: 0 var(--m-small);
+        flex: 1 0 200px;
+        min-height: 100%;
+        @include flex-align(flex-start, flex-start, column);
+    }
+
+ // -- CREW INFO ---------------
+    // logo
+    .crew-info .logo { 
+        max-width: 120px;
+        margin: 0;
+    }
+
+    // crew name & age
+    .crew-info .crew-name { 
+        display: block;
+        margin-bottom: 5px;
+        color: $white;
+        font-size: 2rem;
+        line-height: 1;
+    }
+    .crew-info .crew-age { 
+        display: block;
+        margin-bottom: calc(var(--m-tiny) + 5px);
+        color: rgba($white, 0.6);
+        font-size: 1.7rem;
+        line-height: 1;
+    }
+
+    // paragraph
+    .crew-info p { 
+        max-width: 70%;
+        margin-left: 0;
+    }
+
+ // -- CREW PHOTO -------------
+    .crew-photo img {
+        max-height: 60vh;
+    }
+
 }
