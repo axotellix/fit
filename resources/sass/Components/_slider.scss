@@ -23,6 +23,7 @@
         transition: background 0.25s;
         @include flex-align;
         @include border-radius(100%);
+        @include box-shadow('medium');
 
         &:hover { background: rgba($dark, 0.9) }
 

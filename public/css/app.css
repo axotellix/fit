@@ -1076,6 +1076,10 @@ section .button, section .button-big {
   -moz-border-radius: 100%;
   -khtml-border-radius: 100%;
   -webkit-border-radius: 100%;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  -khtml-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
 }
 .photo-slider .ctrl:hover {
   background: rgba(9, 11, 14, 0.9);
