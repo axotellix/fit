@@ -38,3 +38,71 @@ svg.dots {
     }
 } 
 
+
+// [ contacts page ]
+.contacts-wrapper {
+    max-height: max-content;
+    padding: 0 var(--m-tiny);
+    flex-wrap: wrap; 
+    @include flex-align(center, flex-start);
+
+    .contacts, .working-hours {
+        flex: 1 0 320px;
+        min-width: 320px;
+        margin-bottom: var(--m-small);
+    }
+}
+
+ // phone, email ...
+.contacts .contacts-plain {
+    margin: 0;
+
+    span { 
+        display: inline-block;
+        min-width: 60px;
+
+        &::after { content: ':' }
+    }
+}
+ // social links
+.contacts .contacts-social {
+    margin: 0;
+    margin-top: varset('--m-tiny + 10px');
+    transform: scaleX(1);
+
+    a { 
+        max-width: max-content; 
+        margin-top: 5px;
+        @include flex-align(flex-start);
+
+        &:hover {
+            color: $yellow;
+            .social-icon { fill: $yellow !important; opacity: 0.7 }     // FIX: SVG fill (not working)
+        }
+    }
+    .social-icon { 
+        position: relative;
+        margin: 0; 
+        top: 2px; 
+        margin-right: 12px; 
+        opacity: 1; 
+    }
+    a span { @extend .widen-font; display: inline-block }
+}
+
+.working-hours {
+    @include flex-align(flex-start, flex-start);
+
+    p { 
+        margin: 0;
+        margin-top: 5px;
+        line-height: 1;
+        font-size: 2rem;
+    }
+    span { display: inline-block; min-width: 100px; }
+    .weekday {   
+        margin-top: 15px;
+
+        &::after { content: ':' }
+    }
+}

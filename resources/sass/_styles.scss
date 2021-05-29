@@ -8,9 +8,13 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+a { 
+    color: $white;
+}
+
 svg.bg-img {
     fill: $white !important;
-    opacity: 0.05 !important;
+    opacity: 0.05;
     z-index: -1;
     user-select: none;
     pointer-events: none;

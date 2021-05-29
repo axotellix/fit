@@ -33,3 +33,15 @@ h4, .h4 {
         content: '.';
     }
 }
+
+ // [ paragraph subtitle ]
+.subtitle {
+    @extend .widen-font;
+    
+    display: inline-block;
+    color: rgba($white, 0.6);
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+
+    &::after { content: ':' }
+}
