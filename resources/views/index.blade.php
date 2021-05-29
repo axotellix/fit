@@ -31,7 +31,7 @@
         </svg>
 
         <!-- CTA button -->
-        <a href="" class="CTA button-big"><span>JOIN NOW</span></a>
+        <a href="/prices" class="CTA button-big"><span>JOIN NOW</span></a>
 
         <!-- social icons -->
         <div class="icons">

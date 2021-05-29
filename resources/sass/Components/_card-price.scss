@@ -1,0 +1,47 @@
+
+// [ PRICE CARD ]
+.card-price { 
+    display: inline-block;
+    width: 275px;
+    margin-right:  var(--m-tiny);
+    margin-bottom: var(--m-tiny);
+}
+.card-price * { 
+    display: block;
+}
+.card-wrapper { 
+    padding-top:    calc( var(--m-tiny) + 15px );
+    padding-bottom: calc( var(--m-tiny) + 22px );
+    padding-left:   calc( var(--m-tiny) + 7px );
+    padding-right:  calc( var(--m-tiny) + 7px );
+    background: $dark;
+    transition: background 0.25s;
+
+    &:hover { background: rgba($dark, 0.9) }
+}
+
+.card-price .plan-title {
+    margin-bottom: calc( var(--m-tiny) + 10px );
+
+    &::after { content: '' }
+}
+.card-price .price {
+    @extend .widen-font;
+
+    color: rgba($white, 0.6);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.card-price .plan-type {
+    @extend .widen-font;
+    
+    width: 0;
+    overflow: visible;
+    font-size: 1.7rem;
+}
+
+.card-price .CTA {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: var(--m-tiny);
+}

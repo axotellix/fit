@@ -22,3 +22,9 @@ Route::get('/crew', function () {
 Route::get('/gallery', function () {
     return view('gallery');
 });
+Route::get('/prices', function () {
+    return view('prices');
+});
+Route::get('/contacts', function () {
+    return view('contacts');
+});

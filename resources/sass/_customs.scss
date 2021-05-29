@@ -147,6 +147,11 @@
   max-width: 22px !important;
 } 
 
+.widen-font {
+  transform: scaleX(1.2);     // crutch: to visually widen 'Syne' font with weight less than 600
+  transform-origin: left top;
+}
+
 
 // [ visibility ]
 .hidden {
