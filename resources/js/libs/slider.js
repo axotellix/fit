@@ -23,10 +23,21 @@ const slider = {
     //@ init > slider (get all URLs & show 1st image)
     init() {
         
-        // add > imgs` URLs
+        // add > imgs` URLs | bind > click event (show img)
         let gallery_imgs = this.gallery.querySelectorAll('img');
         Object.keys(gallery_imgs).forEach(img => {
+
+            gallery_imgs[img].parentNode.addEventListener('click', e => {
+                this.cur_ind = gallery_imgs[img].parentNode.getAttribute('data-slider-id');
+                window.scroll({
+                    top: 0, 
+                    behavior: 'smooth'
+                  });
+                this.showImg();
+                this.checkIndex();
+            });
             this.imgs.push(gallery_imgs[img].getAttribute('src'));
+
         });
 
         // show > 1st image in slider
@@ -37,23 +48,13 @@ const slider = {
     _prev() {
         this.cur_ind--;
         this.showImg();
-        if( this.cur_ind == 0 ) {
-            this.disableControl(this.prev);
-        }
-        if( this.cur_ind < this.imgs.length - 1 ) {
-            this.activateControl(this.next);
-        }
+        this.checkIndex();
     },
     //@ show > next image
     _next() {
         this.cur_ind++;
         this.showImg();
-        if( this.cur_ind == this.imgs.length - 1 ) {
-            this.disableControl(this.next);
-        }
-        if( this.cur_ind > 0 ) {
-            this.activateControl(this.prev);
-        }
+        this.checkIndex();
     },
     //@ show > image (according to current index)
     showImg() {
@@ -64,6 +65,26 @@ const slider = {
         setTimeout(() => {
             this.cur_img.classList.remove('slide');
         }, 250);
+    },
+    //@ check > index to activate / disable control button
+    checkIndex() {
+
+        // disable > prev | activate > next
+        if( this.cur_ind == 0 ) {
+            this.disableControl(this.prev);
+        }
+        if( this.cur_ind < this.imgs.length - 1 ) {
+            this.activateControl(this.next);
+        }
+
+        // disable > next | activate > prev
+        if( this.cur_ind == this.imgs.length - 1 ) {
+            this.disableControl(this.next);
+        }
+        if( this.cur_ind > 0 ) {
+            this.activateControl(this.prev);
+        }
+
     },
     //@ make > control button active (clickable)
     activateControl( control ) {
