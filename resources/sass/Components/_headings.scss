@@ -34,6 +34,22 @@ h4, .h4 {
     }
 }
 
+ // [ form title ]
+ h5, .h5 {
+    @extend .widen-font;
+    
+    display: block;
+    max-width: max-content;
+    margin-bottom: var(--m-tiny);
+    color: $white;
+    font-family: $f-body;
+    font-size: 1.4rem;
+    font-weight: $f-normal;
+    transform-origin: left top;
+    
+    & ~ & { margin-top: var(--m-small) }
+ }
+
  // [ paragraph subtitle ]
 .subtitle {
     @extend .widen-font;

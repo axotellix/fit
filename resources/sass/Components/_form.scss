@@ -1,0 +1,150 @@
+
+// [ FORM ]
+form {
+    width: 100%;
+    @include flex-align(flex-start, flex-start, column);
+}
+label {
+    @extend .widen-font;
+
+    display: block;
+    margin-bottom: var(--m-tiny);
+    color: $grey;
+    font-size: 1.4rem;
+    font-weight: $f-normal;
+}
+input { 
+    width: 100%; height: 50px;
+    padding: 0 var(--m-tiny);
+    background: $dark;
+    font-size: 1.4rem;
+    color: $white;
+    border: 2px solid lighten($dark, 15%);
+    transition: border-color 0.25s;
+
+
+    &.digit {
+        font-weight: $f-bold;
+
+        &::-webkit-input-placeholder {
+            font-weight: $f-bold;
+            font-family: 'NotCourierSans' !important;
+        }
+        &::-moz-input-placeholder {
+            font-weight: $f-bold;
+            font-family: 'NotCourierSans' !important;
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color: lighten($dark, 20%);
+    }
+
+    &:hover {
+        border-color: lighten($dark, 25%);
+    }
+    &:focus {
+        border-color: $yellow;
+    }
+    
+    & + & { margin-top: var(--m-tiny) }
+}
+button {
+    margin-top: var(--m-small);
+}
+
+.remark {
+    @extend .widen-font;
+
+    margin-bottom: var(--m-tiny);
+    color: $grey;
+    font-size: 1.4rem;
+    font-weight: $f-normal;
+}
+
+// [ credit card ]
+.credit-card {
+    width: 80%; height: auto;
+    aspect-ratio: 16 / 9;
+    padding: varset('--m-tiny + 15px');
+    background: $dark;
+    border: 2px solid lighten($dark, 15%);
+    border-radius: 6px;
+    flex-wrap: wrap;
+    @include flex-align(center, stretch);
+
+    .signs, .card-number, .extra-data {
+        flex: 1 0 100%;
+        height: 33.33%;
+    }
+
+    input {
+        @extend .widen-font;
+
+        height: auto;
+        padding: 0;
+        font-family: 'NotCourierSans';
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        text-indent: 0;
+        border: none;
+        background: transparent;
+
+        &::-webkit-input-placeholder {
+            font-weight: $f-bold;
+            font-family: $f-body;
+        }
+        &::-moz-input-placeholder {
+            font-weight: $f-bold;
+            font-family: $f-body;
+        }
+    }
+}
+.credit-card .signs {
+    @include flex-align(space-between);
+
+    .chip {
+        width: 56px; height: 40px;
+        background: $grey;
+        border-radius: 3px;
+    }
+
+    .company {
+        display: inline-block;
+        color: $grey;
+        font-size: 2rem;
+        font-weight: $f-extra-bold;
+    }
+}
+.credit-card .extra-data {
+    @include flex-align(space-between);
+
+
+    .card-holder input, .expired-data input {
+        letter-spacing: 0;
+        transform: scaleX(1.05);
+    }
+
+    .card-holder input {
+        &::-webkit-input-placeholder {
+            font-size: 1.7rem;
+        }
+        &::-moz-input-placeholder {
+            font-size: 1.7rem;
+        }
+    }
+
+    .card-holder, .expired-data, .cvc {
+        flex-grow: 1;
+    }
+    .card-holder { 
+        flex-basis: 250px;
+    }
+    .expired-data { 
+        flex-basis: 115px;
+    }
+    .cvc { 
+        flex-basis: 50px;
+    }
+}   

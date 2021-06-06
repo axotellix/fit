@@ -1,4 +1,8 @@
 
+// [ FONTS ]
+@import "http://fonts.fontstorage.com/import/notcourier.css";
+
+
 // [ PRESETS ]
 @import 'Normalize.css';
 @import 'variables';
@@ -32,4 +36,5 @@
 @import 'Components/slider';
 @import 'Components/card-price';
 @import 'Components/preloader';
+@import 'Components/form';
 
