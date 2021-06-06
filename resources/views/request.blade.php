@@ -33,7 +33,7 @@
             'plan_type'  => 'Monthly membership',
             'show_cta'   => false
         ])
-        <a href="" class = 'button-plain ml-2 mb-50'>SELECT ANOTHER</a>
+        <a href="/prices" class = 'button-plain ml-2 mb-50'>SELECT ANOTHER</a>
         
         @include('Layouts.layout_form', [
             'submit' => 'GET A CARD',

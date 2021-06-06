@@ -57,7 +57,7 @@
             
         </div>
 
-        <!-- crew photo -->
+        <!-- [ photo slider ] -->
         <div class="photo-slider">
             <div class="slider-controls">
 

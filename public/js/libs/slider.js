@@ -1,0 +1,1 @@
+const slider=document.querySelector(".photo-slider"),prev=slider.querySelector(".ctrl.prev"),next=slider.querySelector(".ctrl.next");prev.addEventListener("click",(()=>{console.log("ok")})),next.addEventListener("click",(()=>{console.log("ok")}));
