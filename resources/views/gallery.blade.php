@@ -58,22 +58,23 @@
         </div>
 
         <!-- [ photo slider ] -->
-        <div class="photo-slider">
+        <div class="photo-slider" data-slider = 'container'>
             <div class="slider-controls">
 
-                <a class="ctrl prev inactive">
+                <a class="ctrl prev inactive"  data-slider = 'prev'>
                     <svg>
                         <use xlink:href="/img/sprites.svg#chevron-left"></use>
                     </svg>
                 </a>
-                <a class="ctrl next">
+                <a class="ctrl next"  data-slider = 'next'>
                     <svg>
                         <use xlink:href="/img/sprites.svg#chevron-right"></use>
                     </svg>
                 </a>
 
             </div>
-            <img src="/img/gym/1.png" alt="fit gym">
+            <!-- <img src="/img/gym/1.png" data-slider = 'img' alt="fit gym"> -->
+            <img src = '' data-slider = 'img' alt="fit gym">
         </div>
 
         
@@ -95,7 +96,7 @@
 
         <h2>GALLERY</h2>
 
-        <ul class = 'gallery-wide-horizontal'>
+        <ul class = 'gallery-wide-horizontal'  data-slider = 'gallery'>
             <li class="photo"><img src="/img/gym/1.png" alt="fit gym"></li>
             <li class="photo"><img src="/img/gym/2.png" alt="fit gym"></li>
             <li class="photo"><img src="/img/gym/3.png" alt="fit gym"></li>

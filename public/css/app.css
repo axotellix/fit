@@ -1188,6 +1188,12 @@ section .button, section .button-big {
       -ms-flex-align: center;
           align-items: center;
 }
+.photo-slider:hover .ctrl {
+  opacity: 1;
+}
+.photo-slider:hover .ctrl.inactive {
+  opacity: 0.5;
+}
 .photo-slider .slider-controls {
   padding: inherit;
   position: absolute;
@@ -1216,9 +1222,10 @@ section .button, section .button-big {
   margin: 0 var(--m-tiny);
   border: 1px solid #F5DC54;
   background: rgba(9, 11, 14, 0.5);
+  opacity: 0.1;
   cursor: pointer;
-  -webkit-transition: background 0.25s;
-  transition: background 0.25s;
+  -webkit-transition: background 0.25s, opacity 0.25s;
+  transition: background 0.25s, opacity 0.25s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1243,7 +1250,7 @@ section .button, section .button-big {
   background: rgba(9, 11, 14, 0.9);
 }
 .photo-slider .ctrl.inactive {
-  opacity: 0.5;
+  opacity: 0.05;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1261,8 +1268,33 @@ section .button, section .button-big {
 }
 .photo-slider img {
   max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.photo-slider img.slide {
+  -webkit-animation: 0.25s slide ease-out;
+          animation: 0.25s slide ease-out;
 }
 
+@-webkit-keyframes slide {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .card-price {
   display: inline-block;
   width: 275px;

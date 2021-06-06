@@ -5,6 +5,14 @@
     max-width: 66vw;
     @include flex-align(flex-start, center);
 
+    &:hover .ctrl { 
+        opacity: 1;
+
+        &.inactive {
+            opacity: 0.5;
+        }
+     }
+
     // buttons: prev & next
     .slider-controls { 
         padding: inherit;
@@ -19,8 +27,10 @@
         margin: 0 var(--m-tiny);
         border: 1px solid $yellow;
         background: rgba($dark, 0.5);
+        opacity: 0.1;
         cursor: pointer;
-        transition: background 0.25s;
+        transition: background 0.25s, 
+                    opacity 0.25s;
         @include flex-align;
         @include border-radius(100%);
         @include box-shadow('medium');
@@ -28,7 +38,7 @@
         &:hover { background: rgba($dark, 0.9) }
 
         &.inactive {
-            opacity: 0.5;
+            opacity: 0.05;
             user-select: none;
             pointer-events: none;
         }
@@ -39,6 +49,17 @@
     // slider`s image
     img {
         max-width: 100%;
+        user-select: none;
+
+        &.slide {
+            animation: 0.25s slide ease-out;
+        }
     }
 
+}
+
+
+@keyframes slide { 
+    from { opacity: 0.1 }
+    to   { opacity: 1   }
 }
