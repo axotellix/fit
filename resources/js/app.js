@@ -3,3 +3,4 @@
 
 // init > image slider
 slider.init();
+

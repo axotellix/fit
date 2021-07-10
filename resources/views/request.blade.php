@@ -41,7 +41,7 @@
             'title_1'  => 'PERSONAL INFO',
             'fields' => [
 
-                // firts name
+                // first name
                 [
                     'type'          => 'text',
                     'name'          => 'first_name',

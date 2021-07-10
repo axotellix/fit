@@ -1,6 +1,19 @@
 
 // [ HEADINGS ]
 
+ // [ auth heading ]
+h1.auth-heading {
+    @extend .widen-font;
+
+    width: auto;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    transform-origin: center;
+}
+
  // [ section heading ]
 h2 { 
     margin: var(--m-medium) 0;
@@ -16,6 +29,20 @@ h2 {
         color: $yellow;
     }
 }
+
+ // [ section heading: body text ]
+h3 {
+    @extend .widen-font;
+
+    width: auto;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    transform-origin: center;
+}
+
  // [ paragraph heading ]
 h4, .h4 { 
     display: block;
@@ -35,7 +62,7 @@ h4, .h4 {
 }
 
  // [ form title ]
- h5, .h5 {
+h5, .h5 {
     @extend .widen-font;
     
     display: block;

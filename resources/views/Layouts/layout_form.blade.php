@@ -22,7 +22,7 @@
             title        = "{{ $field->title ?? ''           }}" 
             placeholder  = "{{ $field->placeholder ?? ''     }}"
             autocomplete = "{{ $field->autocomplete ?? 'off' }}"
-            @if(($field->required ?? false) === true)
+            @if(($field->required ?? false) === true)   {{-- req ?: false --}}
                 required
             @endif
         />

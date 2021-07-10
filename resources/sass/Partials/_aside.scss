@@ -1,0 +1,52 @@
+
+// [ ASIDE: admin sidebar ]
+:root { --sidebar-w: 170px }
+aside.admin-sidebar {
+    width: var(--sidebar-w); height: 100%;
+    margin: 0; padding: var(--m-small) var(--m-tiny);
+    background: $dark;
+    transition: width 0.25s;
+    @include flex-align(flex-start, center, column);
+    @include align(left, top, fixed);
+   
+
+    nav {
+        width: 100%; height: auto;
+        margin-top: var(--m-small);
+        background: transparent;
+        box-shadow: none;
+        @include flex-align(flex-start, center, column);
+    }
+    nav a {
+        text-align: center;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: var(--m-tiny);
+        color: darken($grey, 5%);
+
+        &:hover {
+            color: $white; 
+        }
+        &[active = '1'] {
+            color: $white;
+        }
+
+        span { 
+            @extend .widen-font;
+            display: block;
+            transform-origin: center;
+        }
+    }
+
+    .logout {
+        display: block;
+        color: $yellow;
+        font-size: 1.5rem;
+        margin-top: auto;
+        margin-bottom: 0;
+
+        &:hover {
+            color: lighten($yellow, 5%);
+        }
+    }
+}
