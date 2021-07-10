@@ -7,14 +7,13 @@ use Livewire\Component;
 use App\Models\Trainer;
 use App\Models\Image;
 
-class AdminCrew extends Component
+class CrewGallery extends Component
 {
     public $crew;
 
     public function render()
     {
         $this->crew = Trainer::all();
-        return view('livewire.admin-crew')
-            ->extends('layouts.admin.layout_admin');
+        return view('livewire.crew-gallery');
     }
 }

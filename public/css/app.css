@@ -437,6 +437,10 @@
   width: 100% !important;
 }
 
+.w-80 {
+  width: 80% !important;
+}
+
 .w-50 {
   width: 50% !important;
 }
@@ -1171,6 +1175,10 @@ footer .bg-img {
   color: #FCF4DF;
 }
 
+.button-red {
+  border-color: #FA2A42;
+}
+
 .social-icon {
   fill: #FCF4DF;
   max-width: 20px;
@@ -1662,6 +1670,32 @@ label {
   font-weight: 400;
 }
 
+textarea {
+  width: 100%;
+  min-height: 250px;
+  margin-top: var(--m-tiny);
+  padding: var(--m-tiny);
+  background: #090B0E;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2em;
+  color: #FCF4DF;
+  border: 2px solid #27303d;
+  -webkit-transition: border-color 0.25s;
+  transition: border-color 0.25s;
+  resize: none;
+}
+textarea::-webkit-input-placeholder {
+  color: #313c4c;
+  text-transform: uppercase;
+}
+textarea:hover {
+  border-color: #3b485c;
+}
+textarea:focus {
+  border-color: #F5DC54;
+}
+
 input {
   width: 100%;
   height: 50px;
@@ -1860,4 +1894,49 @@ button {
 .credit-card .extra-data .cvc {
   -ms-flex-preferred-size: 50px;
       flex-basis: 50px;
+}
+
+.system-message {
+  width: auto;
+  padding: 15px 25px;
+  color: #FCF4DF;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  background: #13171e;
+  border: 2px solid #F5DC54;
+  z-index: 9999;
+  -webkit-animation: popup 0.25s 3s ease-in-out forwards;
+          animation: popup 0.25s 3s ease-in-out forwards;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  -khtml-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  left: 0var(--m-small);
+  bottom: 5vh;
+  -webkit-transform: translateX(0) translateY(0);
+          transform: translateX(0) translateY(0);
+}
+
+@-webkit-keyframes popup {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes popup {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

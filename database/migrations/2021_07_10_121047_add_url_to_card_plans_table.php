@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImagesTable extends Migration
+class AddUrlToCardPlansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateImagesTable extends Migration
      */
     public function up()
     {
-        // table > IMAGES
-        Schema::create('images', function (Blueprint $table) {
-            $table->id('photo_id');
-            $table->timestamps();
-            $table->string('category');
-            $table->string('caption');
-            $table->string('url')->unique();
+        Schema::table('card_plans', function (Blueprint $table) {
+            $table->string('url');
         });
     }
 
@@ -30,6 +25,8 @@ class CreateImagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('images');
+        Schema::table('card_plans', function (Blueprint $table) {
+            //
+        });
     }
 }

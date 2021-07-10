@@ -1,0 +1,27 @@
+
+ // [ system message ]
+.system-message {
+    width: auto;
+    padding: 15px 25px;
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: $f-bold;
+    text-align: center;
+    background: lighten($dark, 5%);
+    border: 2px solid $yellow;
+    z-index: 9999;
+    animation: popup 0.25s 3s ease-in-out forwards;
+    @include border-radius(5px);
+    @include box-shadow('medium');
+    @include align(left, bottom, fixed, var(--m-small), 5vh);
+
+    //FIX: not working (no delay)
+    // opacity: 0;
+    // transition: opacity 2.25s;
+    // transition-delay: 2.5s;
+}
+
+@keyframes popup {
+    from { opacity: 1 }
+    to   { opacity: 0 }
+}

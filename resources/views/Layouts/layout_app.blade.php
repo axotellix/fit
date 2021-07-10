@@ -9,6 +9,7 @@
 
     <!-- [ STYLES ] -->
     <link rel="stylesheet" href="/css/app.css">
+    <livewire:styles />
     
     <!-- [ SCRIPTS ] -->
     <script src = '/js/libs/slider.js' defer></script>
@@ -28,5 +29,7 @@
 
     @yield('footer')
 
+    <livewire:scripts />
+    
 </body>
 </html>

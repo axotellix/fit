@@ -16,7 +16,7 @@
 
     <title>FIT</title>
 </head>
-<body class = 'preload'>
+<body>
 
     
     <!-- [ SIDEBAR: admin navigation ] -->

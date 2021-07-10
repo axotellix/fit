@@ -19,13 +19,36 @@
             type         = "{{ $field->type ?? 'text'        }}" 
             name         = "{{ $field->name ?? ''            }}" 
             id           = "{{ $field->id ?? ''              }}" 
+            value        = "{{ $field->value ?? ''           }}"
             title        = "{{ $field->title ?? ''           }}" 
             placeholder  = "{{ $field->placeholder ?? ''     }}"
             autocomplete = "{{ $field->autocomplete ?? 'off' }}"
+            @isset($field->model)
+                wire:model="{{ $field->model ?? '' }}"
+            @endisset 
             @if(($field->required ?? false) === true)   {{-- req ?: false --}}
                 required
-            @endif
+            @endif 
         />
+
+    @endforeach
+    @foreach( $t_areas as $t_area )
+
+        @php( $t_area = (object) $t_area )
+        <textarea 
+            type         = "{{ $t_area->type ?? 'text'        }}" 
+            name         = "{{ $t_area->name ?? ''            }}" 
+            id           = "{{ $t_area->id ?? ''              }}" 
+            title        = "{{ $t_area->title ?? ''           }}" 
+            placeholder  = "{{ $t_area->placeholder ?? ''     }}"
+            autocomplete = "{{ $t_area->autocomplete ?? 'off' }}"
+            @isset($t_area->model)
+                wire:model="{{ $t_area->model ?? '' }}"
+            @endisset 
+            @if(($t_area->required ?? false) === true)   {{-- req ?: false --}}
+                required
+            @endif  
+        >{{ $t_area->value ?? '' }}</textarea>
 
     @endforeach
 

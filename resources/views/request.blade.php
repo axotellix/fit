@@ -28,18 +28,28 @@
         <h2>GET MEMBERSHIP</h2>
 
         @include('Layouts.layout_price-card', [
-            'plan_title' => 'Easy start!', 
-            'price'      => '$20 / mo', 
-            'plan_type'  => 'Monthly membership',
+            'plan_title' => $price_card->card->title, 
+            'price'      => "$$price_card->price / $price_card->period", 
+            'plan_type'  => $price_card->card->type,
             'show_cta'   => false
         ])
         <a href="/prices" class = 'button-plain ml-2 mb-50'>SELECT ANOTHER</a>
         
         @include('Layouts.layout_form', [
             'submit' => 'GET A CARD',
+            'action' => '/request/' . $price_card->plan_id,
+            'method' => 'POST',
 
             'title_1'  => 'PERSONAL INFO',
             'fields' => [
+
+                // plan id
+                [
+                    'type'          => 'hidden',
+                    'name'          => 'plan_id',
+                    'value'         => $price_card->plan_id,
+                    'required'      => true
+                ],
 
                 // first name
                 [

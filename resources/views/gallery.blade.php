@@ -96,20 +96,12 @@
 
         <h2>GALLERY</h2>
 
-        <ul class = 'gallery-wide-horizontal'  data-slider = 'gallery'>
-            <li class="photo" data-slider-id = '0'><img src="/img/gym/1.png" alt="fit gym"></li>
-            <li class="photo" data-slider-id = '1'><img src="/img/gym/2.png" alt="fit gym"></li>
-            <li class="photo" data-slider-id = '2'><img src="/img/gym/3.png" alt="fit gym"></li>
-
-            <li class="photo" data-slider-id = '3'><img src="/img/gym/1.png" alt="fit gym"></li>
-            <li class="photo" data-slider-id = '4'><img src="/img/gym/2.png" alt="fit gym"></li>
-            <li class="photo" data-slider-id = '5'><img src="/img/gym/3.png" alt="fit gym"></li>
-
-            <li class="photo" data-slider-id = '6'><img src="/img/gym/1.png" alt="fit gym"></li>
-            <li class="photo" data-slider-id = '7'><img src="/img/gym/2.png" alt="fit gym"></li>
-            <li class="photo" data-slider-id = '8'><img src="/img/gym/3.png" alt="fit gym"></li>
-
-            <li class="photo" data-slider-id = '9'><img src="/img/gym/1.png" alt="fit gym"></li>
+        <ul class = 'gallery-wide-horizontal' data-slider = 'gallery'>
+            @foreach( $gyms as $gym )
+                <li class="photo" data-slider-id = "{{ $loop->index }}">
+                    <img src="{{ $gym->url }}" alt="fit gym">
+                </li>
+            @endforeach
         </ul>
 
         <section>

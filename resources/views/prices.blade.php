@@ -27,28 +27,19 @@
 
         <h2>PRICE LIST</h2>
 
-        @include('Layouts.layout_price-card', [
-            'plan_title' => 'Easy start!', 
-            'price'      => '$20 / mo', 
-            'plan_type'  => 'Monthly membership',
-            'url'        => ''
-        ])
-
-        @include('Layouts.layout_price-card', [
-            'plan_title' => 'Stay close!', 
-            'price'      => '$50 / mo', 
-            'plan_type'  => 'Family membership',
-            'url'        => ''
-        ])
-
-        @include('Layouts.layout_price-card', [
-            'plan_title' => 'Profitable!', 
-            'price'      => '$200 / yr', 
-            'plan_type'  => 'Annual membership',
-            'url'        => ''
-        ])
-
+        @foreach( $price_cards as $price_card )
+            @include('Layouts.layout_price-card', [
+                'plan_title' => $price_card->card->title, 
+                'price'      => "$$price_card->price / $price_card->period", 
+                'plan_type'  => $price_card->card->type,
+                'url'        => "/request/" . $price_card->card->plan_id
+            ])  
+        @endforeach
         
+        
+        @if( session()->has('purchase-status') )
+            <p class="system-message">{{ session('purchase-status') }}</p>
+        @endif
 
     </div>
     @endsection
