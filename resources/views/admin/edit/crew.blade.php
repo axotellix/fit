@@ -1,5 +1,5 @@
 
-@extends('layouts.admin.layout_admin')
+@extends('Layouts.admin.layout_admin')
 
 @section('content')
 

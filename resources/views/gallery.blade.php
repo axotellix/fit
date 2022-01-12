@@ -36,7 +36,7 @@
             <!-- social icons -->
             <div class="icons">
 
-                <a href="">
+                <a href="https:/instagram.com/axotellix" target="_blank">
                     <svg class="social-icon ico-19">
                         <use xlink:href="/img/sprites.svg#ico-instagram"></use>
                     </svg>
@@ -111,7 +111,7 @@
                 More photos, training sessions, special offers and news in our instagram. <br>Chek it out! 
             </p>
 
-            <a href="" class="button"><span>VISIT INSTAGRAM</span></a>
+            <a href="https:/instagram.com/axotellix" class="button"  target = "_blank"><span>VISIT INSTAGRAM</span></a>
         </section>
         
     </div>

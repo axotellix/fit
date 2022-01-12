@@ -1,4 +1,7 @@
 
+@extends('Layouts.admin.layout_admin')
+
+
 @section('content')
 
 <!-- [ section heading ] -->
@@ -17,6 +20,7 @@
             </li>
         </a>
     @endforeach
+
         
 </ul>
 
@@ -24,7 +28,7 @@
     <p class="system-message">{{ session('edit-status') }}</p>
 @endif
 
-@section('content')
+@endsection
 
 
 

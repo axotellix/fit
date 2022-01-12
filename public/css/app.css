@@ -595,6 +595,12 @@ nav .navlink {
 nav .navlink:hover {
   color: white;
   border-color: #FCF4DF;
+  opacity: 0.8;
+}
+nav .navlink.active {
+  color: white;
+  border-color: #FCF4DF;
+  opacity: 1;
 }
 
 header {

@@ -24,8 +24,15 @@ nav .navlink {
     transition: color 0.25s, border-color 0.25s;
     @include flex-align;
 
+    
     &:hover {
         color: lighten($white, 10%);
         border-color: $white;
+        opacity: 0.8;
+    }
+    &.active {
+        color: lighten($white, 10%);
+        border-color: $white;
+        opacity: 1;
     }
 }

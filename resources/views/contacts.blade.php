@@ -77,7 +77,7 @@
 
             <div class="map">
                 <a href="" class="button"><span>OPEN IN YANDEX.MAPs</span></a>
-                <img src="/img/map.png" alt="map">
+                <img src="/img/map.jpg" alt="map">
             </div>
         </section>
         

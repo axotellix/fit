@@ -3,53 +3,63 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', 'Controllers\HomeController@index');
-Route::get('/crew', 'Controllers\CrewController@index');
-Route::get('/gallery', 'Controllers\GalleryController@index');
-Route::get('/prices', 'Controllers\PriceController@index');
-Route::get('/contacts', function () {
-    return view('contacts');
+// [ PAGES ]
+Route::namespace('Pages')->group(function () {
+
+    // [ pages: general ]
+    Route::get('/', 'HomeController@index');
+    Route::get('/crew', 'CrewController@index');
+    Route::get('/gallery', 'GalleryController@index');
+    Route::get('/prices', 'PriceController@index');
+    Route::get('/contacts', function () {
+        return view('contacts', ['page' => 'contacts']);
+    });
+
+    // [ page: request card ]  
+    Route::get('/request/{plan_id}', 'RequestController@index');
+    Route::post('/request/{plan_id}', 'RequestController@store');
+
 });
-Route::get('/request/{plan_id}', 'Controllers\RequestController@index');
-Route::post('/request/{plan_id}', 'Controllers\RequestController@store');
 
-// [ auth ]
-Auth::routes();
-Route::post('/logout', 'Controllers\Auth\LoginController@logout')->name('logout');
 
-// [ admin panel: overview ]
-Route::get('/admin', function() { return redirect('/admin/crew'); })->name('admin');
-Route::get('/admin/crew', 'Livewire\AdminCrew');
-Route::get('/admin/gallery', 'Livewire\AdminGallery');
-Route::get('/admin/price', 'Livewire\AdminPrice');
-Route::get('/admin/contacts', 'Livewire\AdminContacts');
+// [ AUTH ]
+Route::namespace('Auth')->group(function () {
 
-// [ admin panel: add ]
-Route::get('/admin/crew/add', 'Controllers\Edit\EditCrewController@show');
-Route::get('/admin/crew/add', 'Controllers\Edit\EditCrewController@show');
-Route::get('/admin/crew/add', 'Controllers\Edit\EditCrewController@show');
-Route::get('/admin/crew/add', 'Controllers\Edit\EditCrewController@show');
+    Auth::routes();
+    Route::get('/logout', 'LoginController@logout')->name('logout');
 
-// [ admin panel: add ]
-Route::post('/admin/crew/add', 'Controllers\Edit\EditCrewController@add');
-Route::post('/admin/crew/add', 'Controllers\Edit\EditCrewController@add');
-Route::post('/admin/crew/add', 'Controllers\Edit\EditCrewController@add');
-Route::post('/admin/crew/add', 'Controllers\Edit\EditCrewController@add');
+});
 
-// [ admin panel: edit (overview) ]
-Route::get('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@index');
-Route::get('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@index');
-Route::get('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@index');
-Route::get('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@index');
 
-// [ admin panel: edit (save changes) ]
-Route::post('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@update');
-Route::post('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@update');
-Route::post('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@update');
-Route::post('/admin/crew/edit/{crew_id}', 'Controllers\Edit\EditCrewController@update');
+// [ LIVEWIRE ]
+Route::namespace('Livewire')->group(function () {
 
-// [ admin panel: delete ]
-Route::delete('/admin/crew/delete/{crew_id}', 'Controllers\Edit\EditCrewController@destroy');
-Route::delete('/admin/crew/delete/{crew_id}', 'Controllers\Edit\EditCrewController@destroy');
-Route::delete('/admin/crew/delete/{crew_id}', 'Controllers\Edit\EditCrewController@destroy');
-Route::delete('/admin/crew/delete/{crew_id}', 'Controllers\Edit\EditCrewController@destroy');
+    // [ admin panel: overview ]
+    Route::get('/admin', function() { return redirect('/admin/crew'); })->middleware('auth')->name('admin');
+    Route::get('/admin/crew', 'AdminCrew@render')->middleware('auth');
+    Route::get('/admin/gallery', 'AdminGallery@render')->middleware('auth');
+    Route::get('/admin/price', 'AdminPrice@render')->middleware('auth');
+    Route::get('/admin/contacts', 'AdminContacts@render')->middleware('auth');
+
+});
+
+
+// [ ADMIN PANEL ]
+Route::namespace('Admin')->group(function () {
+
+    // [ edit crew: add (overview) ]
+    Route::get('/admin/crew/add', 'Edit\EditCrewController@show')->middleware('auth');
+
+    // [ edit crew: add (save) ]
+    Route::post('/admin/crew/add', 'Edit\EditCrewController@add')->middleware('auth');
+
+    // [ edit crew: edit member data (overview) ]
+    Route::get('/admin/crew/edit/{crew_id}', 'Edit\EditCrewController@index')->middleware('auth');
+
+    // [ edit crew: edit member data (save) ]
+    Route::post('/admin/crew/edit/{crew_id}', 'Edit\EditCrewController@update')->middleware('auth');
+
+    // [ edit crew: delete member ]
+    Route::delete('/admin/crew/delete/{crew_id}', 'Edit\EditCrewController@destroy')->middleware('auth');
+
+});

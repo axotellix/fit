@@ -20,6 +20,14 @@ const slider = {
     cur_ind: 0,
 
     // [ methods ]
+    //@ get > path to large image
+    getLarge( src ) {
+        let s = src.slice(0, src.lastIndexOf('/') + 1)
+        let e = src.slice(src.lastIndexOf('/') + 1, src.length)
+
+        return s + 'large/' + e;
+    },
+
     //@ init > slider (get all URLs & show 1st image)
     init() {
         
@@ -36,7 +44,8 @@ const slider = {
                 this.showImg();
                 this.checkIndex();
             });
-            this.imgs.push(gallery_imgs[img].getAttribute('src'));
+            let src =  this.getLarge( gallery_imgs[img].getAttribute('src') );
+            this.imgs.push( src );
 
         });
 

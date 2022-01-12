@@ -36,7 +36,7 @@
         <!-- social icons -->
         <div class="icons">
 
-            <a href="">
+            <a href="https:/instagram.com/axotellix" target="_blank">
                 <svg class="social-icon ico-19">
                     <use xlink:href="/img/sprites.svg#ico-instagram"></use>
                 </svg>
@@ -97,7 +97,7 @@
                 @endforeach
             </ul>
 
-            <a href="/gallery" class="button"><span>SEE ALL PHOTOS</span></a>
+            <a href="https:/instagram.com/axotellix" class="button"  target = "_blank"><span>VISIT INSTAGRAM</span></a>
 
         </section>
 
@@ -129,7 +129,7 @@
 
             <div class="map">
                 <a href="" class="button"><span>OPEN IN YANDEX.MAPs</span></a>
-                <img src="/img/map.png" alt="map">
+                <img src="/img/map.jpg" alt="map">
             </div>
         </section>
 

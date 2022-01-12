@@ -1,0 +1,28 @@
+[2021-12-28 23:55:24] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:207)
+[stacktrace]
+#0 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(132): Illuminate\\Log\\LogManager->resolve(NULL, NULL)
+#1 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(111): Illuminate\\Log\\LogManager->get(NULL)
+#2 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(583): Illuminate\\Log\\LogManager->driver()
+#3 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(252): Illuminate\\Log\\LogManager->error('RecursiveDirect...', Array)
+#4 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(415): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(ValueError))
+#5 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(113): Illuminate\\Foundation\\Http\\Kernel->reportException(Object(ValueError))
+#6 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\public\\index.php(59): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#7 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\server.php(21): require_once('C:\\\\Soft\\\\XAMPP\\\\h...')
+#8 {main}
+"} 
+[2021-12-28 23:55:24] laravel.ERROR: RecursiveDirectoryIterator::__construct(): Argument #1 ($directory) cannot be empty {"exception":"[object] (ValueError(code: 0): RecursiveDirectoryIterator::__construct(): Argument #1 ($directory) cannot be empty at C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\symfony\\finder\\Iterator\\RecursiveDirectoryIterator.php:48)
+[stacktrace]
+#0 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\symfony\\finder\\Iterator\\RecursiveDirectoryIterator.php(48): RecursiveDirectoryIterator->__construct('', 4096)
+#1 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\symfony\\finder\\Finder.php(740): Symfony\\Component\\Finder\\Iterator\\RecursiveDirectoryIterator->__construct('', 4096, false)
+#2 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\symfony\\finder\\Finder.php(618): Symfony\\Component\\Finder\\Finder->searchInDirectory('')
+#3 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(88): Symfony\\Component\\Finder\\Finder->getIterator()
+#4 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(65): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->getConfigurationFiles(Object(Illuminate\\Foundation\\Application))
+#5 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles(Object(Illuminate\\Foundation\\Application), Object(Illuminate\\Config\\Repository))
+#6 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap(Object(Illuminate\\Foundation\\Application))
+#7 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#8 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#9 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#10 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\public\\index.php(59): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#11 C:\\Soft\\XAMPP\\htdocs\\Laravel\\fit-gym\\server.php(21): require_once('C:\\\\Soft\\\\XAMPP\\\\h...')
+#12 {main}
+"} 

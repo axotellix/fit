@@ -32,25 +32,27 @@
         />
 
     @endforeach
-    @foreach( $t_areas as $t_area )
+    @isset($t_areas)
+        @foreach( $t_areas as $t_area )
 
-        @php( $t_area = (object) $t_area )
-        <textarea 
-            type         = "{{ $t_area->type ?? 'text'        }}" 
-            name         = "{{ $t_area->name ?? ''            }}" 
-            id           = "{{ $t_area->id ?? ''              }}" 
-            title        = "{{ $t_area->title ?? ''           }}" 
-            placeholder  = "{{ $t_area->placeholder ?? ''     }}"
-            autocomplete = "{{ $t_area->autocomplete ?? 'off' }}"
-            @isset($t_area->model)
-                wire:model="{{ $t_area->model ?? '' }}"
-            @endisset 
-            @if(($t_area->required ?? false) === true)   {{-- req ?: false --}}
-                required
-            @endif  
-        >{{ $t_area->value ?? '' }}</textarea>
+            @php( $t_area = (object) $t_area )
+            <textarea 
+                type         = "{{ $t_area->type ?? 'text'        }}" 
+                name         = "{{ $t_area->name ?? ''            }}" 
+                id           = "{{ $t_area->id ?? ''              }}" 
+                title        = "{{ $t_area->title ?? ''           }}" 
+                placeholder  = "{{ $t_area->placeholder ?? ''     }}"
+                autocomplete = "{{ $t_area->autocomplete ?? 'off' }}"
+                @isset($t_area->model)
+                    wire:model="{{ $t_area->model ?? '' }}"
+                @endisset 
+                @if(($t_area->required ?? false) === true)   {{-- req ?: false --}}
+                    required
+                @endif  
+            >{{ $t_area->value ?? '' }}</textarea>
 
-    @endforeach
+        @endforeach
+    @endisset
 
 
     @if( $title_2 ?? false )

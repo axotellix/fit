@@ -1,4 +1,7 @@
 
+@extends('Layouts.admin.layout_admin')
+
+
 @section('content')
 
 <!-- [ section heading ] -->
@@ -6,4 +9,4 @@
     
 <!-- [ content ] -->
 
-@section('content')
+@endsection
