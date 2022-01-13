@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Events\GiveThank;
 
 
 // [ PAGES ]
@@ -61,5 +62,24 @@ Route::namespace('Admin')->group(function () {
 
     // [ edit crew: delete member ]
     Route::delete('/admin/crew/delete/{crew_id}', 'Edit\EditCrewController@destroy')->middleware('auth');
+
+    // [ dashboard ]
+    Route::get('/admin/dashboard', function() {
+        return view('admin.dashboard.dashboard');
+    })->middleware('auth');
+
+});
+
+
+// [ THANK TEAM ]
+Route::get('/thank', function() {
+    return view('thank');
+});
+Route::post('/thank', function() {
+    
+    $from = request()->from;
+    $msg  = request()->msg;
+    $data = json_encode(['from' => $from, 'msg' => $msg]);
+    event(new GiveThank( $data ));
 
 });

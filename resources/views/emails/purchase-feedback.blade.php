@@ -14,8 +14,8 @@ Please, check the details:
   
 
 <!-- [ buttons ] -->
-@component('mail::button', ['url' => $details_link])
-show details
+@component('mail::button', ['url' => $thanksgiving_link])
+give thank
 @endcomponent
 @component('mail::button', ['url' => $reject_link])
 cancel purchase

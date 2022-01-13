@@ -43,6 +43,7 @@ class RequestController extends Controller
         // prepare > user info (for email)
         $user_info = (object) [
             'name'   => $user->first_name,
+            'email'  => $user->email,
             'plan'   => CardPlan::where( 'plan_id', '=', $user->plan_id )->pluck('title'),
             'type'   => CardPlan::where( 'plan_id', '=', $user->plan_id )->pluck('type'),
             'price'  => Price::where( 'plan_id', '=', $user->plan_id )->pluck('price'),

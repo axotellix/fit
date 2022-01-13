@@ -23,8 +23,8 @@ class PurchaseFeedback extends Mailable
             ->subject('Membership card successfully purchased!')
             ->markdown('emails.purchase-feedback')
             ->with([
-                'reject_link'  => 'http://127.0.0.1:8000/card-reject',
-                'details_link' => 'http://127.0.0.1:8000/card-details'
+                'reject_link'       => 'http://127.0.0.1:8000/card-reject',
+                'thanksgiving_link' => 'http://127.0.0.1:8000/thank?from=' . $this->user->email
             ]);
 
     }
