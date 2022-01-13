@@ -12,14 +12,19 @@ use App\Models\Image;
 
 class EditCrewController extends Controller
 {
+    public $page = 'crew';
+
     public function index( $crew_id ) { 
 
         // return > view
-        return view('admin.edit.crew', ['crew_id' => $crew_id]); 
+        return view('admin.edit.crew', ['crew_id' => $crew_id, 'page' => $this->page]); 
 
     }
 
-    public function update( $crew_id ) { 
+    public function update( $crew_id, Request $request, Trainer $trainer ) { 
+
+        // check > permissons
+        $this->authorize('update', $trainer);
         
         // create > new instance of Models
         $member = Trainer::findOrFail($crew_id);
@@ -42,7 +47,10 @@ class EditCrewController extends Controller
 
     }
 
-    public function destroy( $crew_id ) { 
+    public function destroy( $crew_id, Request $request, Trainer $trainer ) { 
+
+        // check > permissons
+        $this->authorize('update', $trainer);
 
         // create > new instance of Models
         $member = Trainer::findOrFail($crew_id);
@@ -56,7 +64,11 @@ class EditCrewController extends Controller
 
     }
 
-    public function show() {
+    public function show( Request $request, Trainer $trainer ) {
+
+        // check > permissons
+        $this->authorize('update', $trainer);
+        
         // return > view
         return view('admin.add.crew'); 
     }
